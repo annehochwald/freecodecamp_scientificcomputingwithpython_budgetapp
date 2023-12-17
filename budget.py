@@ -34,7 +34,6 @@ class Category:
     def check_funds(self, amount):
         return self.funds - amount >= 0
 
-  
     def __str__(self):
         title = f"{self.category:*^30}\n"
         items = ""
@@ -44,6 +43,7 @@ class Category:
             total += item['amount']
         result = title + items + f"Total: {total:.2f}"
         return result
+
 
 def create_spend_chart(categories):
     chart = "Percentage spent by category\n"
